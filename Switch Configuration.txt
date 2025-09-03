@@ -1,0 +1,29 @@
+--- Switch (create VLANs, access ports, trunk, port-security) ---
+enable
+configure terminal
+vlan 10
+ name ADMIN
+vlan 20
+ name FACULTY
+vlan 30
+ name STUDENTS
+
+! Access port example
+interface fa0/2
+ switchport mode access
+ switchport access vlan 10
+
+! Trunk toward router/distribution
+interface fa0/24
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+
+! Port security example
+interface fa0/3
+ switchport mode access
+ switchport access vlan 30
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+
