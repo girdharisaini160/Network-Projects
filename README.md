@@ -1,4 +1,4 @@
-# Network-Projects
+# Network-Project
 Network topology and its configuration.
 Campus Network Design (Cisco Packet Tracer)
 This repository contains a Packet Tracer lab for a simulated campus network.
